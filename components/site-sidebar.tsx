@@ -1,8 +1,9 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Github, Home, Mail, User, Code, Brain, FileText, type LucideIcon } from 'lucide-react'
+import { Github, Home, Mail, User, Code, Brain, FileText, TypeIcon as type, LucideIcon } from 'lucide-react'
 import { XIcon } from "./icons/x-icon"
 import {
   Sidebar,
@@ -15,6 +16,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarFooter,
+  useSidebar
 } from "@/components/ui/sidebar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -65,6 +67,20 @@ const navigation: NavGroup[] = [
 
 export function SiteSidebar() {
   const pathname = usePathname()
+  const { isMobile, setOpenMobile } = useSidebar()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const handleLinkClick = () => {
+    if (isMobile) {
+      setOpenMobile(false)
+    }
+  }
+
+  if (!mounted) return null
 
   return (
     <Sidebar 
@@ -102,6 +118,7 @@ export function SiteSidebar() {
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
+                        onClick={handleLinkClick}
                       >
                         <item.icon className="h-4 w-4" />
                         <span className="group-data-[collapsible=icon]:hidden">{item.title}</span>
