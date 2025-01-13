@@ -7,7 +7,6 @@ import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/s
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css"
 
-// These are already font instances, no need to initialize them
 const geistSans = GeistSans
 const geistMono = GeistMono
 
@@ -34,7 +33,7 @@ export default function RootLayout({
         >
           <SidebarProvider defaultOpen>
             <SiteSidebar />
-            <SidebarInset>
+            <SidebarInset className="bg-black">
               <header className="flex h-16 items-center gap-4 border-b bg-black/50 px-6 backdrop-blur-sm">
                 <SidebarTrigger />
               </header>

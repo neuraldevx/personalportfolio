@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Github, Home, Mail, User, Code, Brain, FileText } from 'lucide-react'
+import { Github, Home, Mail, User, Code, Brain, FileText, type LucideIcon } from 'lucide-react'
 import { XIcon } from "./icons/x-icon"
 import {
   Sidebar,
@@ -19,7 +19,20 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-const navigation = [
+// Define a type for navigation items
+type NavItem = {
+  title: string;
+  href: string;
+  icon: LucideIcon | (({ className }: { className?: string }) => JSX.Element);
+  external?: boolean;
+}
+
+type NavGroup = {
+  title: string;
+  items: NavItem[];
+}
+
+const navigation: NavGroup[] = [
   {
     title: "Navigation",
     items: [
@@ -54,8 +67,11 @@ export function SiteSidebar() {
   const pathname = usePathname()
 
   return (
-    <Sidebar collapsible="icon">
-      <SidebarHeader>
+    <Sidebar 
+      collapsible="icon"
+      className="bg-black"
+    >
+      <SidebarHeader className="bg-black">
         <form className="flex space-x-2 group-data-[collapsible=icon]:hidden">
           <Input
             type="search"
@@ -67,7 +83,7 @@ export function SiteSidebar() {
           </Button>
         </form>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="bg-black">
         {navigation.map((group) => (
           <SidebarGroup key={group.title}>
             <SidebarGroupLabel className="group-data-[collapsible=icon]:hidden">
@@ -98,9 +114,9 @@ export function SiteSidebar() {
           </SidebarGroup>
         ))}
       </SidebarContent>
-      <SidebarFooter className="p-4 group-data-[collapsible=icon]:hidden">
+      <SidebarFooter className="p-4 group-data-[collapsible=icon]:hidden bg-black">
         <p className="text-xs text-muted-foreground">
-          © 2024 Jacob Christensen
+          © 2025 Jacob Christensen
         </p>
       </SidebarFooter>
     </Sidebar>

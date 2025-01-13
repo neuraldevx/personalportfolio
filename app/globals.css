@@ -69,16 +69,21 @@ body {
 
 /* Global selection styles */
 ::selection {
-  background: rgba(0, 150, 136, 0.8); /* Rich teal */
-  color: #ffffff; /* White text */
+  @apply bg-fuchsia-300 text-fuchsia-900;
 }
 
 ::-moz-selection {
-  background: rgba(0, 150, 136, 0.8); /* Rich teal */
-  color: #ffffff; /* White text */
+  @apply bg-fuchsia-300 text-fuchsia-900;
 }
 
+/* Mobile sidebar specific styles */
+[data-mobile="true"].bg-background {
+  background-color: rgb(0 0 0) !important;
+}
 
+[data-mobile="true"] [data-sidebar="sidebar"] {
+  background-color: rgb(0 0 0) !important;
+}
 
 .text-gradient {
   background: linear-gradient(to right, rgb(45, 212, 191), rgb(56, 189, 248));
@@ -86,3 +91,6 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+
+
