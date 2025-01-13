@@ -185,7 +185,7 @@ export default function Home() {
       <footer className="mt-auto w-full border-t border-white/10 bg-black/50 py-6">
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-6 md:flex-row">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>© 2024 Jacob Christensen.</span>
+            <span>© 2025 Jacob Christensen.</span>
             <span>Built with Next.js and Tailwind.</span>
           </div>
           <div className="flex items-center gap-4">
