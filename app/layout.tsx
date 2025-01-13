@@ -4,6 +4,7 @@ import { GeistMono } from 'geist/font/mono'
 import { ThemeProvider } from "@/components/theme-provider"
 import { SiteSidebar } from "@/components/site-sidebar"
 import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css"
 
 // These are already font instances, no need to initialize them
@@ -41,6 +42,7 @@ export default function RootLayout({
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
