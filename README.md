@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Next.js and TypeScript, showcasing my professional experience, projects, and technical skills.
 
-![Portfolio Preview](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_C8558F09BD9B-1-ytq6xTxO8mGuilesKwoGu3stna2au0.jpeg)
+![Portfolio Preview](https://www.jakechristensen.tech/)
 
 ## 🚀 Technologies Used
 
