@@ -35,7 +35,7 @@ export default function Home() {
       {/* Hero Section */}
       <WavyBackground
         className="max-w-5xl mx-auto"
-        containerClassName="min-h-[calc(100vh-4rem)]"
+        containerClassName="min-h-[calc(100vh-4rem)] relative z-10"
         colors={["#38bdf8", "#818cf8", "#c084fc"]}
         waveWidth={100}
         backgroundFill="rgba(0, 0, 0, 0.8)"
