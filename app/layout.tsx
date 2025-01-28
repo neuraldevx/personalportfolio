@@ -32,9 +32,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SidebarProvider defaultOpen>
-            <SiteSidebar className="relative z-30" />
-            <SidebarInset className="bg-black relative z-20">
-              <header className="flex h-16 items-center gap-4 border-b bg-black/50 px-6 backdrop-blur-sm">
+            <SiteSidebar className="relative z-50" />
+            <SidebarInset className="bg-black relative z-40">
+              <header className="flex h-16 items-center gap-4 border-b bg-black/50 px-6 backdrop-blur-sm z-50">
                 <SidebarTrigger />
               </header>
               {children}
