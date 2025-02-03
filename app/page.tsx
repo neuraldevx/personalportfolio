@@ -77,7 +77,7 @@ export default function Home() {
                   <div className="space-y-4">
                     <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
                       Hi, I'm{" "}
-                      <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-400">
+                      <span className="text-gradient bg-clip-text text-transparent">
                         Jacob Christensen
                       </span>
                     </h1>
@@ -197,4 +197,3 @@ export default function Home() {
     </WavyBackground>
   )
 }
-
