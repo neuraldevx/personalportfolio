@@ -1,3 +1,4 @@
+import Head from "next/head";
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
@@ -22,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        <link rel="icon" href="public/favicon.png" type="image/png" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-black text-white`}
       >
@@ -32,7 +36,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SidebarProvider defaultOpen>
-            <SiteSidebar className="relative z-50" />
+            <SiteSidebar/>
             <SidebarInset className="bg-black relative z-40">
               <header className="flex h-16 items-center gap-4 border-b bg-black/50 px-6 backdrop-blur-sm z-50">
                 <SidebarTrigger />
