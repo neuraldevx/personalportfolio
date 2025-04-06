@@ -28,9 +28,9 @@ export default function Home() {
     <div className="container max-w-5xl pb-12 md:pb-16 lg:pb-20 space-y-16 md:space-y-20 lg:space-y-24">
       <SplashCursor />
       {/* Hero Section */}
-      <section className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+      <section className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-12 lg:gap-16">
         {/* Text Content */}
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 space-y-6 min-w-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <h2 className="text-3xl font-semibold mb-6 text-center">Current Focus</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-0">
             {/* Card 1 */}
             <Card className="glass-card overflow-hidden group shadow-lg hover:shadow-xl hover:shadow-blue-400/30 dark:hover:shadow-purple-400/30 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-[1.02]">
               <CardHeader className="pb-3">
