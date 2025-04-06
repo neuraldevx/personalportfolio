@@ -165,12 +165,12 @@ export default function ProjectsPage() {
             onValueChange={setActiveCategory}
             className="w-full"
           >
-            <TabsList className="grid grid-cols-1 md:grid-cols-4 bg-background/20 backdrop-blur-sm">
+            <TabsList className="flex flex-col md:flex-row h-auto md:h-10 bg-background/20 backdrop-blur-sm p-1 rounded-lg md:items-center">
               {categories.map(category => (
                 <TabsTrigger 
                   key={category.id} 
                   value={category.id}
-                  className="data-[state=active]:bg-accent data-[state=active]:text-white font-medium"
+                  className="data-[state=active]:bg-accent data-[state=active]:text-white font-medium w-full justify-center md:w-auto md:justify-start py-2 md:py-1.5 px-4"
                 >
                   {category.label}
                 </TabsTrigger>
@@ -199,7 +199,7 @@ export default function ProjectsPage() {
                       
                       <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-gradient-to-br from-background to-background/0 opacity-30 blur-xl group-hover:opacity-50 transition-opacity duration-500" />
                       
-                      <CardHeader className="pb-3 px-5 pt-5 relative">
+                      <CardHeader className="pb-3 px-3 sm:px-5 pt-5 relative">
                         <div className="flex items-center justify-between mb-3">
                           <div className="flex items-center gap-3.5">
                             <div className={`flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br ${project.color} text-white shadow-md group-hover:shadow-lg transition-shadow relative`}>
@@ -229,7 +229,7 @@ export default function ProjectsPage() {
                         <CardDescription className="mt-4 leading-relaxed text-sm text-muted-foreground">{project.description}</CardDescription>
                       </CardHeader>
                       
-                      <CardContent className="pt-4 pb-8 px-5 space-y-6 relative">
+                      <CardContent className="pt-4 pb-8 px-3 sm:px-5 space-y-6 relative">
                         <div>
                           <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">Technologies</h4>
                           <div className="flex flex-wrap gap-2">
@@ -251,7 +251,7 @@ export default function ProjectsPage() {
                         </div>
                       </CardContent>
                       
-                      <CardFooter className="pt-3 pb-5 px-5 border-t border-border/30">
+                      <CardFooter className="pt-3 pb-5 px-3 sm:px-5 border-t border-border/30">
                         <div className="flex items-center justify-between w-full">
                           <span className="text-xs text-muted-foreground">
                             View project details
