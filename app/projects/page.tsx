@@ -229,7 +229,7 @@ export default function ProjectsPage() {
                         <CardDescription className="mt-4 leading-relaxed text-sm text-muted-foreground">{project.description}</CardDescription>
                       </CardHeader>
                       
-                      <CardContent className="pt-4 pb-8 px-3 sm:px-5 space-y-6 relative">
+                      <CardContent className="pt-6 pb-10 px-3 sm:px-5 space-y-6 relative">
                         <div>
                           <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">Technologies</h4>
                           <div className="flex flex-wrap gap-2">
@@ -251,7 +251,7 @@ export default function ProjectsPage() {
                         </div>
                       </CardContent>
                       
-                      <CardFooter className="pt-3 pb-5 px-3 sm:px-5 border-t border-border/30">
+                      <CardFooter className="pt-4 pb-6 px-3 sm:px-5 border-t border-border/30">
                         <div className="flex items-center justify-between w-full">
                           <span className="text-xs text-muted-foreground">
                             View project details
