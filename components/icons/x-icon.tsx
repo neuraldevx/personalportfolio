@@ -1,11 +1,16 @@
+import React from "react"
+
 export function XIcon({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 1000 1000"
-      className={className}
+    <svg 
+      role="img" 
+      viewBox="0 0 24 24" 
+      xmlns="http://www.w3.org/2000/svg" 
       fill="currentColor"
+      className={className}
     >
-      <path d="M675.7 345.7L915.6 48.2H835.9L631.8 301.9L469.1 48.2H217.3L462.5 437.9L210.5 751.8H290.2L506.4 483.1L678.8 751.8H930.6L675.7 345.7ZM538.5 443.9L499.1 387.7L297.6 98.2H431.3L589.3 324.6L628.7 380.8L840.6 685.8H706.9L538.5 443.9Z" />
+      <title>X</title>
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
     </svg>
   )
 }

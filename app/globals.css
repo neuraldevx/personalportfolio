@@ -3,49 +3,112 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 17px; /* Increase base font size */
+  }
+
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 0 0% 100%; /* Set to white */
+    --foreground: 222 47% 11%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 222 47% 11%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --popover-foreground: 222 47% 11%;
+    
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 45%;
+    
+    --accent: 210 79% 46%;
+    --accent-foreground: 210 40% 98%;
+    
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --radius: 0.5rem;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222 47% 11%;
+    
+    --radius: 0.75rem;
+
+    /* Professional color accents */
+    --teal: 180 70% 40%;
+    --cyan: 199 80% 45%;
+    --blue: 210 79% 46%;
+    --slate: 215 16% 47%;
+    
+    /* Sidebar colors - light mode */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Sidebar width variables */
+    --sidebar-width-expanded: 16rem; /* 256px */
+    --sidebar-width-collapsed: 4rem; /* 64px */
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    /* Darker Dracula-inspired theme */
+    --background: 230 15% 6%;
+    --foreground: 60 9.1% 97.8%;
+    
+    --card: 230 15% 6%;
+    --card-foreground: 60 9.1% 97.8%;
+    
+    --popover: 230 15% 6%;
+    --popover-foreground: 60 9.1% 97.8%;
+    
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 230 15% 6%;
+    
+    --secondary: 230 15% 10%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    
+    --muted: 230 15% 12%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    --accent: 280 100% 76%;
+    --accent-foreground: 230 15% 6%;
+    
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    
+    --border: 230 15% 12%;
+    --input: 230 15% 12%;
+    --ring: 280 100% 76%;
+    
+    /* Dracula-inspired accent colors */
+    --teal: 170 78% 70%;
+    --cyan: 191 97% 77%;
+    --blue: 225 95% 75%;
+    --purple: 280 100% 76%;
+    --pink: 326 100% 74%;
+    --red: 0 100% 67%;
+    --orange: 31 100% 71%;
+    --yellow: 60 100% 70%;
+    --green: 135 94% 65%;
+    
+    /* Sidebar colors - dark mode */
+    --sidebar-background: 230 15% 6%;
+    --sidebar-foreground: 60 9.1% 97.8%;
+    --sidebar-primary: 280 100% 76%;
+    --sidebar-primary-foreground: 230 15% 6%;
+    --sidebar-accent: 230 15% 10%;
+    --sidebar-accent-foreground: 60 9.1% 97.8%;
+    --sidebar-border: 230 15% 12%;
+    --sidebar-ring: 280 100% 76%;
   }
 }
 
@@ -62,33 +125,216 @@
 /* Custom styles */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-body {
-  background: linear-gradient(to bottom, #000000, #1a1a1a);
+/* Dark theme background */
+.dark body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Glass effect for dark theme elements */
+.dark .glass-effect {
+  background: rgba(24, 25, 35, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Apply theme transition */
+:root {
+  --transition-duration: 0.3s;
+}
+
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+}
+
+/* Sidebar layout adjustments */
+.main-content {
+  margin-left: var(--sidebar-width-expanded); /* Default expanded sidebar width */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+body.sidebar-collapsed .main-content {
+  margin-left: var(--sidebar-width-collapsed); /* Collapsed sidebar width */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: var(--sidebar-width-collapsed);
+  }
 }
 
 /* Global selection styles */
 ::selection {
-  @apply bg-fuchsia-300 text-fuchsia-900;
+  @apply bg-accent/30 text-accent-foreground;
 }
 
 ::-moz-selection {
-  @apply bg-fuchsia-300 text-fuchsia-900;
+  @apply bg-accent/30 text-accent-foreground;
 }
 
-/* Mobile sidebar specific styles */
-[data-mobile="true"].bg-background {
-  background-color: rgb(0 0 0) !important;
-}
-
-[data-mobile="true"] [data-sidebar="sidebar"] {
-  background-color: rgb(0 0 0) !important;
-}
-
+/* Gradient text classes */
 .text-gradient {
-  background: linear-gradient(to right, rgb(45, 212, 191), rgb(56, 189, 248));
+  @apply text-foreground dark:text-transparent dark:bg-clip-text;
+  background-image: linear-gradient(to right, hsl(var(--blue)), hsl(var(--cyan)));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.dark .text-gradient {
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.1));
+  background-image: linear-gradient(to right, hsl(var(--purple)), hsl(var(--cyan)));
+}
+
+.text-gradient-blue {
+  @apply text-foreground dark:text-transparent dark:bg-clip-text;
+  background-image: linear-gradient(to right, hsl(var(--blue)), hsl(var(--cyan)));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.dark .text-gradient-blue {
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.1));
+  background-image: linear-gradient(to right, hsl(var(--blue)), hsl(var(--cyan)));
+}
+
+.text-gradient-teal {
+  @apply text-foreground dark:text-transparent dark:bg-clip-text;
+  background-image: linear-gradient(to right, hsl(var(--teal)), hsl(var(--cyan)));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.dark .text-gradient-teal {
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.1));
+  background-image: linear-gradient(to right, hsl(var(--green)), hsl(var(--cyan)));
+}
+
+/* Glass effect */
+.glass-card {
+  @apply bg-background/80 dark:bg-background/30 backdrop-blur-md border-border/0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dracula-inspired glass card for dark mode */
+.dark .glass-card {
+  background: rgba(24, 25, 35, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated border - professional toned down */
+.animated-border {
+  position: relative;
+  background: linear-gradient(to right, 
+    hsl(var(--teal)/70%) 0%, 
+    hsl(var(--blue)/70%) 25%, 
+    hsl(var(--accent)/70%) 50%, 
+    hsl(var(--cyan)/70%) 75%, 
+    hsl(var(--teal)/70%) 100%
+  );
+  background-size: 400% 100%;
+  animation: borderAnimation 10s linear infinite;
+  padding: 1px;
+  border-radius: calc(var(--radius) + 1px);
+}
+
+/* Dracula-inspired animated border for dark mode */
+.dark .animated-border {
+  background: linear-gradient(to right, 
+    hsl(var(--purple)/70%) 0%, 
+    hsl(var(--pink)/70%) 20%, 
+    hsl(var(--red)/70%) 40%, 
+    hsl(var(--yellow)/70%) 60%, 
+    hsl(var(--green)/70%) 80%, 
+    hsl(var(--cyan)/70%) 100%
+  );
+  background-size: 400% 100%;
+  box-shadow: 0 0 10px rgba(142, 68, 173, 0.2);
+}
+
+.animated-border > div {
+  @apply bg-background;
+  border-radius: var(--radius);
+}
+
+@keyframes borderAnimation {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dracula-inspired scrollbar */
+.dark ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(24, 25, 35, 0.1);
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(189, 147, 249, 0.3);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(189, 147, 249, 0.5);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Remove focus outline for mouse users, keep for keyboard navigation */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 2px;
+}
+
+/* Text highlight effect */
+::selection {
+  background: hsl(var(--accent) / 0.3);
+  color: hsl(var(--foreground));
+}
+::-moz-selection {
+  background: hsl(var(--accent) / 0.3);
+  color: hsl(var(--foreground));
+}
+.live-highlight {
+  background: hsl(var(--accent) / 0.15); /* Subtle background highlight */
+  border-radius: 2px;
+  box-shadow: 0 0 5px hsl(var(--accent) / 0.1); /* Subtle glow */
+  color: inherit; /* Keep original text color */
 }

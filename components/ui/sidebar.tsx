@@ -234,7 +234,7 @@ const Sidebar = React.forwardRef<
         />
         <div
           className={cn(
-            "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
+            "duration-200 fixed inset-y-0 z-[999] hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
             side === "left"
               ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
               : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
@@ -248,9 +248,13 @@ const Sidebar = React.forwardRef<
         >
           <div
             data-sidebar="sidebar"
-            className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow"
+            className={cn(
+              "fixed top-0 left-0 bottom-0 z-[9999] flex w-full flex-col border-r bg-background transition-[width] duration-300 sm:w-[220px] [&[data-collapsible=icon][data-collapsed=true]]:w-[70px] [&[data-collapsible=full][data-collapsed=true]]:w-0",
+              className
+            )}
+            data-collapsed={state === "collapsed"}
           >
-            {children}
+            <div className="group flex h-full flex-col">{children}</div>
           </div>
         </div>
       </div>
@@ -735,6 +739,27 @@ const SidebarMenuSubButton = React.forwardRef<
 })
 SidebarMenuSubButton.displayName = "SidebarMenuSubButton"
 
+const SidebarToggleButton = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<"button">
+>(({ className, ...props }, ref) => {
+  const { toggleSidebar } = useSidebar()
+
+  return (
+    <button
+      ref={ref}
+      data-sidebar="toggle-button"
+      className={cn("h-7 w-7", className)}
+      onClick={toggleSidebar}
+      {...props}
+    >
+      <PanelLeft />
+      <span className="sr-only">Toggle Sidebar</span>
+    </button>
+  )
+})
+SidebarToggleButton.displayName = "SidebarToggleButton"
+
 export {
   Sidebar,
   SidebarContent,
@@ -759,5 +784,6 @@ export {
   SidebarRail,
   SidebarSeparator,
   SidebarTrigger,
+  SidebarToggleButton,
   useSidebar,
 }
