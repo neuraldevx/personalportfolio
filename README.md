@@ -1,5 +1,13 @@
 # Personal Portfolio Website
 
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/621edb19-fffb-4992-ba79-ae884799425f" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/78c68f13-c3db-4e2b-8ea0-af8f896cb1f3" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/e4c15f22-2af6-4056-ba0b-290bded8d953" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/b73c915f-e4c9-407b-9aba-d098a1d7adac" />
+
+
+
+
 A modern, responsive portfolio website built with Next.js and TypeScript, showcasing my professional experience, projects, and technical skills.
 
 ![Portfolio Preview](https://www.jakechristensen.tech/)
