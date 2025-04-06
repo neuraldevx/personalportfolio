@@ -163,9 +163,9 @@ export default function ProjectsPage() {
             defaultValue="all" 
             value={activeCategory}
             onValueChange={setActiveCategory}
-            className="w-full max-w-4xl"
+            className="w-full"
           >
-            <TabsList className="grid grid-cols-2 md:grid-cols-4 bg-background/20 backdrop-blur-sm">
+            <TabsList className="grid grid-cols-1 md:grid-cols-4 bg-background/20 backdrop-blur-sm">
               {categories.map(category => (
                 <TabsTrigger 
                   key={category.id} 

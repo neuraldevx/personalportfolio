@@ -36,7 +36,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight h-20 md:h-24">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
               Hello, I&apos;m{" "}
               <TypeAnimation
                 sequence={[
@@ -52,7 +52,7 @@ export default function Home() {
                 cursor={true}
               />
             </h1>
-            <p className="mt-4 text-xl text-muted-foreground">
+            <p className="mt-6 text-xl text-muted-foreground">
               Software developer specializing in full-stack web development, AI applications, and engineering solutions.
             </p>
           </motion.div>
