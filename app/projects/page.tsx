@@ -145,7 +145,7 @@ export default function ProjectsPage() {
     : projects.filter(project => project.category === activeCategory)
 
   return (
-    <div className="min-h-screen pb-24 pt-10">
+    <div className="min-h-screen pb-24 pt-10 overflow-x-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

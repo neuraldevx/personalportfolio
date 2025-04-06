@@ -25,7 +25,7 @@ export default function Home() {
   ]
   
   return (
-    <div className="container max-w-5xl pb-12 md:pb-16 lg:pb-20 space-y-16 md:space-y-20 lg:space-y-24">
+    <div className="container max-w-5xl pb-12 md:pb-16 lg:pb-20 space-y-16 md:space-y-20 lg:space-y-24 overflow-x-hidden">
       <SplashCursor />
       {/* Hero Section */}
       <section className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-12 lg:gap-16">
