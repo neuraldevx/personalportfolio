@@ -23,24 +23,9 @@ export default function AboutPage() {
           <p className="text-sm text-muted-foreground font-medium">
             Publix Super Markets - Lakeland, FL
           </p>
-          <ul className="space-y-2 pl-4 text-sm leading-relaxed text-muted-foreground">
-             <li className="flex items-start gap-2">
-              <CheckCircle className="h-3.5 w-3.5 mt-1 text-green-500 flex-shrink-0" />
-              <span>Developed Excel models to forecast inventory demand for 500+ stores, reducing overstock costs by $200k annually.</span>
-            </li>
-             <li className="flex items-start gap-2">
-              <CheckCircle className="h-3.5 w-3.5 mt-1 text-green-500 flex-shrink-0" />
-              <span>Scripted Python workflows to validate supplier data, decreasing errors by 40%.</span>
-            </li>
-             <li className="flex items-start gap-2">
-              <CheckCircle className="h-3.5 w-3.5 mt-1 text-green-500 flex-shrink-0" />
-              <span>Created Tableau visualizations to track shipment delays, cutting delays by 20%.</span>
-            </li>
-             <li className="flex items-start gap-2">
-              <CheckCircle className="h-3.5 w-3.5 mt-1 text-green-500 flex-shrink-0" />
-              <span>Mentored 5 analysts on SQL optimization, improving query efficiency by 30%.</span>
-            </li>
-          </ul>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Focused on data-driven process improvements, automation, and mentoring analysts to optimize supply chain operations.
+          </p>
         </div>
       ),
     },
@@ -55,24 +40,9 @@ export default function AboutPage() {
           <p className="text-sm text-muted-foreground font-medium">
             Plaid - Remote
           </p>
-          <ul className="space-y-2 pl-4 text-sm leading-relaxed text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <CheckCircle className="h-3.5 w-3.5 mt-1 text-green-500 flex-shrink-0" />
-              <span>Built SQL-based ETL pipelines for 1M+ financial transactions into AWS Redshift, reducing processing time by 25%.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <CheckCircle className="h-3.5 w-3.5 mt-1 text-green-500 flex-shrink-0" />
-              <span>Automated QA checks using Python, resolving 15% of flagged anomalies and improving data integrity for compliance.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <CheckCircle className="h-3.5 w-3.5 mt-1 text-green-500 flex-shrink-0" />
-              <span>Partnered with compliance teams to design Tableau dashboards tracking SOC 2 metrics.</span>
-            </li>
-             <li className="flex items-start gap-2">
-              <CheckCircle className="h-3.5 w-3.5 mt-1 text-green-500 flex-shrink-0" />
-              <span>Authored technical specifications for ETL workflows, ensuring scalability and alignment with requirements.</span>
-            </li>
-          </ul>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Specialized in scalable ETL pipelines, compliance analytics, and technical documentation for financial data integrity.
+          </p>
         </div>
       ),
     },
